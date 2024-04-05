@@ -6,7 +6,9 @@ import { useEffect, useState } from "react"
 import Atropos from 'atropos/react';
 
 
-function ContactPage({data}) {
+function ContactPage() {
+
+  let data = JSON.parse(localStorage.getItem('data-contacts'))
 
   const params = useParams()
 

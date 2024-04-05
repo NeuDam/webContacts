@@ -10,7 +10,6 @@ import {
 import "./index.css";
 import ContactPage from './Route/ContactPage.jsx'
 
-let data = JSON.parse(localStorage.getItem('data-contacts'))
 
 const router = createBrowserRouter([
   {
@@ -19,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/:number",
-    element: <ContactPage data={data}/>
+    element: <ContactPage/>
   }
 ]);
 
