@@ -14,7 +14,7 @@ function ContactCard({data, deleteContact}) {
       highlight={true}
       shadowOffset={40}
     >
-      <img src="/arboles.avif" alt="" data-atropos-offset={2}/>
+      <img src='./arboles.avif' alt="" data-atropos-offset={2}/>
       <div className="blur-effect"></div>
       <button type="button" className='delete-contact' onClick={() => {handlerOnDelete()}}><box-icon name='trash' type='solid' color='#ff0606' ></box-icon></button>
       <h3 className="name" data-atropos-offset={12}>{data.name}</h3>

@@ -36,7 +36,7 @@ function ContactPage() {
       
       <Atropos className="contact_card_full">
         <div className="effect_blurred"></div>
-        <img src="/astronaut.jpg" alt="" data-atropos-offset={2}  className="wallpaper-card"/>
+        <img src="./astronaut.jpg" alt="" data-atropos-offset={2}  className="wallpaper-card"/>
         <img src={photo} alt="Husky Image" className="image_contact" />
         <h2 className="name_card" data-atropos-offset={5}>{contactData.name}</h2>
         <section className="main-data-contact">
