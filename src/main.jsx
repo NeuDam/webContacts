@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import 'atropos/css'
@@ -13,17 +12,15 @@ import ContactPage from './Route/ContactPage.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/webContacts",
     element: <App/>,
   },
   {
-    path: "/:number",
+    path: "/webContacts/:number",
     element: <ContactPage/>
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router}/>
-  </React.StrictMode>,
+  <RouterProvider router={router}/>
 )

@@ -46,7 +46,17 @@ function App() {
 
     if (data !== null){
       setData(JSON.parse(data))
+      return
     }
+
+    localStorage.setItem('data-contacts',JSON.stringify([{
+      "name": "John",
+      "phone": "1443322554",
+      "city": "New York",
+      "email": "john@facebook.com",
+      "document_id": ""
+    }]))
+
     
   },[])
 

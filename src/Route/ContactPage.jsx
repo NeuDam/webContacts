@@ -13,7 +13,11 @@ function ContactPage() {
   const params = useParams()
 
   const [photo, setPhoto] = useState('')
-  const contactData = data.filter((x) => x.phone == params.number)[0]
+
+  let contactData
+
+  contactData = data.filter((x) => x.phone == params.number)[0]
+  
 
   useEffect(() => {
     const getHuskyPhoto = async() => {
