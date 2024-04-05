@@ -1,0 +1,70 @@
+.contact_card_full{
+  position: relative;
+  width: 85%;
+  padding: 8px;
+  border-radius: var(--border-rd-2);
+  margin-inline: auto;
+}
+
+.name_card{
+  font-size: var(--text-sz-2);
+  max-width: 60%;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-bottom: .5em;
+}
+
+.image_contact{
+  position: absolute;
+  right: 8px;
+  max-width: 100%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.main-data-contact{
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.main-data-contact span{
+  font-size: var(--text-sz-3);
+}
+
+.wallpaper-card{
+  border-radius: var(--border-rd-2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.effect_blurred{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.091);
+  backdrop-filter: blur(1px);
+  border-radius: var(--border-rd-2);
+}
+
+
+@media screen and (min-width:1024px) {
+  .contact_card_full{
+    height: 300px;
+    width: 450px;
+  }
+
+  .main-data-contact,.name_card{
+    padding-left: 8px;
+  }
+  
+}

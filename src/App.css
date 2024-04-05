@@ -1,0 +1,211 @@
+.header{
+  width: 100%;
+  padding: 8px 5px;
+  height: fit-content;
+  margin-bottom: 50px;
+  background-color: var(--primary-color);
+  border-bottom-left-radius: var(--border-rd-1);
+  border-bottom-right-radius: var(--border-rd-1);
+}
+
+.title{
+  text-align: center;
+}
+
+main{
+  max-width: 98%;
+  margin-inline: auto;
+}
+
+.opener-form{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  & box-icon{
+    scale: 1.4;
+  }
+}
+
+.floater_form{
+  display: none;
+  position: fixed;
+  width: 75%;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgba(0, 0, 0, 0.502);
+  backdrop-filter: blur(10px) saturate(180%);
+  padding: 8px;
+  border-radius: var(--border-rd-2);
+  box-shadow: 0 0 12px var(--secondary-color);
+  transition: display 1s;
+  z-index: 50;
+}
+
+.hidden-form{
+  display: block;
+}
+
+.my-form{
+  padding: 10px;
+  background-color: var(--terciary-color);
+  border-radius: var(--border-rd-1);
+  min-height: 50vh;
+}
+.sub-title{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.data-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.label_form{
+  margin-bottom: .2em;
+  font-size: var(--text-sz-3);
+}
+
+.input_form{
+  margin-bottom: .5em;
+  border: none;
+  outline: none;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-size: var(--text-sz-3);
+}
+
+.submit-contact-button{
+  margin-top: 20px;
+  padding: 8px 3px;
+  border-radius: var(--border-rd-1);
+  border: none;
+  font-size: var(--text-sz-3);
+  background-color: var(--secondary-color);
+  outline: 1px solid black;
+  color: var(--text-color);
+  transition: color .6s, transform .6s, background-color .6s;
+  &:hover{
+    background-color: var(--primary-color);
+    transform: scale(1.02);
+    color: white;
+  }
+}
+
+.container-contacts{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: .5em;
+}
+
+.my-atropos{
+  position: relative;
+  width: calc(100% / 2.1);
+  height: 160px;
+  padding: 8px;
+  border-radius: var(--border-rd-2);
+  margin-bottom: .5em;
+}
+
+.my-atropos a{
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.my-atropos img{
+  border-radius: var(--border-rd-1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.name{
+  margin-top: 15px;
+  font-size: var(--text-sz-2);
+  text-align: center;
+  margin-bottom: .5em;
+}
+.phone{
+  display: block;
+  font-size: var(--text-sz-3);
+  text-align: center;
+}
+.more-info-button{
+  width: 100%;
+  position: absolute;
+  bottom: 2px;
+  margin-inline: auto;
+  padding: 5px 2px;
+  border: none;
+  border-radius: var(--border-rd-1);
+}
+
+.blur-effect{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-rd-1);
+  background-color: rgba(0, 0, 0, 0.281);
+  backdrop-filter: blur(1px);
+}
+
+.delete-contact{
+  padding: 0;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 15;
+  /* opacity: 0; */
+}
+
+@media screen and (min-width:1024px) {
+  .header{
+    margin-bottom: 90px;
+  }
+  main{
+    display: flex;
+    justify-content: space-between;
+    max-height: 90vh;
+    align-items: start;
+    max-width: 90%;
+  }
+  .container-contacts{
+    width: 70%;
+  }
+  .my-form{
+    position: sticky;
+    top: 20px;
+    width: 22%;
+    margin-inline: auto;
+  }
+  .my-atropos{
+    width: calc(100% / 4.3);
+    height: 210px;
+    scale: 1.1;
+  }
+  .data-container{
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .my-atropos:hover .delete-contact{
+    opacity: 1;
+  }
+
+  .delete-contact{
+    transition: opacity .8s;
+    opacity: 0;
+  }
+}
